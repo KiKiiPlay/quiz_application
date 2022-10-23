@@ -4,6 +4,7 @@
 body {
   background-color: #b51458;
   margin: 0;
+  user-select: none;
 }
 
 #quiz_container {

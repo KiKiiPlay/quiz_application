@@ -5,16 +5,8 @@ const fourthAns = document.getElementById("ans4");
 const allAns = document.querySelectorAll(".answer_container");
 const questionField = document.getElementById("question_container");
 let correctQuestion = 0;
-const correctResult = document.getElementById("correctQuantity");
-const wrongResult = document.getElementById("wrongQuantity");
 
 const arrayOfQuestions = ["2 + 2", "3 + 3", "4 + 4", "5 + 5"];
-
-// const showResult = function () {
-//   const wrongQuestion = 4 - correctQuestion;
-//   correctResult.innerText = "Correct: " + correctQuestion;
-//   wrongResult.innerText = "Wrong: " + wrongQuestion;
-// };
 
 const fourthQuestion = function () {
   questionField.innerText = arrayOfQuestions[3];
@@ -29,12 +21,14 @@ const fourthQuestion = function () {
     if (buttonValue === correctAnswer) {
       correctQuestion++;
       window.location.href = "finish_page.html";
-      correctResult.innerText = "Correct: " + correctQuestion;
-      wrongResult.innerText = "Wrong: " + wrongQuestion;
+      const wrongQuestion = 4 - correctQuestion;
+      localStorage.setItem("wrongResult", wrongQuestion);
+      localStorage.setItem("correctResult", correctQuestion);
     } else {
       window.location.href = "finish_page.html";
-      correctResult.innerText = "Correct: " + correctQuestion;
-      wrongResult.innerText = "Wrong: " + wrongQuestion;
+      const wrongQuestion = 4 - correctQuestion;
+      localStorage.setItem("wrongResult", wrongQuestion);
+      localStorage.setItem("correctResult", correctQuestion);
     }
   };
 
