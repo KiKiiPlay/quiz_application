@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+body {
+  background-color: #b51458;
+  margin: 0;
+}
+
+#quiz_container {
+  height: 600px;
+  width: 1200px;
+  background-color: #dd5674;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 233px;
+}
+
+#question_container {
+  height: 100px;
+  width: 1118px;
+  background-color: #f1c1bf;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 46px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+}
+
+.answer_container {
+  height: 100px;
+  width: 500px;
+  background-color: #312413;
+  border-radius: 30px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  color: #f1c1bf;
+}
+
+#ans1 {
+  position: absolute;
+  top: 237px;
+  left: 30px;
+}
+
+#ans2 {
+  position: absolute;
+  top: 237px;
+  right: 30px;
+}
+
+#ans3 {
+  position: absolute;
+  top: 420px;
+  left: 30px;
+}
+
+#ans4 {
+  position: absolute;
+  top: 420px;
+  right: 30px;
+}
+
+.answer_container:hover {
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  background-color: black;
+}
