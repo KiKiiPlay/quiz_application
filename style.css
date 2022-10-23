@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 
 body {
   background-color: #b51458;
@@ -39,6 +40,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 60px;
   color: #f1c1bf;
+  cursor: pointer;
 }
 
 #ans1 {
@@ -70,4 +72,42 @@ body {
   -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   background-color: black;
+}
+
+#start_container {
+  height: 600px;
+  width: 1200px;
+  background-color: #dd5674;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 233px;
+  text-align: center;
+}
+
+#start_container > span {
+  font-family: "Freehand", cursive;
+  font-size: 160px;
+  color: #f1c1bf;
+}
+
+#start_button {
+  background-color: #f1c1bf;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 370px;
+  height: 100px;
+  width: 700px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #312413;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+}
+
+#start_button:hover {
+  box-shadow: 8px 8px 24px 0px black;
 }
