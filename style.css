@@ -111,3 +111,42 @@ body {
 #start_button:hover {
   box-shadow: 8px 8px 24px 0px black;
 }
+
+#result_container {
+  height: 600px;
+  width: 1200px;
+  background-color: #dd5674;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 233px;
+}
+
+#result_container > span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -24px;
+  font-family: "Freehand", cursive;
+  font-size: 130px;
+}
+
+#background_results {
+  height: 300px;
+  width: 800px;
+  background-color: #f1c1bf;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 209px;
+}
+
+#background_results span {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}

@@ -5,12 +5,12 @@ const fourthAns = document.getElementById("ans4");
 const allAns = document.querySelectorAll(".answer_container");
 const questionField = document.getElementById("question_container");
 let correctQuestion = 0;
-let wrongQuestion = 0;
+const correctResult = document.getElementById("correctQuantity");
+const wrongResult = document.getElementById("wrongQuantity");
 
 const arrayOfQuestions = ["2 + 2", "3 + 3", "4 + 4", "5 + 5"];
 
 const fourthQuestion = function () {
-  let correctAnswer = "10";
   questionField.innerText = arrayOfQuestions[3];
   firstAns.innerText = "62";
   secondAns.innerText = "10";
@@ -18,13 +18,13 @@ const fourthQuestion = function () {
   fourthAns.innerText = "60";
 
   const getValue = function (event) {
+    let correctAnswer = "10";
     const buttonValue = event.target.innerText;
     if (buttonValue === correctAnswer) {
       correctQuestion++;
-      console.log("Correct:", correctQuestion);
-    } else if (buttonValue !== correctAnswer) {
-      wrongQuestion++;
-      console.log("Wrong:", wrongQuestion);
+      window.location.href = "finish_page.html";
+    } else {
+      window.location.href = "finish_page.html";
     }
   };
 
@@ -34,7 +34,6 @@ const fourthQuestion = function () {
 };
 
 const thirdQuestion = function () {
-  let correctAnswer = "8";
   questionField.innerText = arrayOfQuestions[2];
   firstAns.innerText = "8";
   secondAns.innerText = "1";
@@ -42,15 +41,13 @@ const thirdQuestion = function () {
   fourthAns.innerText = "2";
 
   const getValue = function (event) {
+    let correctAnswer = "8";
     const buttonValue = event.target.innerText;
     if (buttonValue === correctAnswer) {
       correctQuestion++;
       fourthQuestion();
-      console.log("Correct:", correctQuestion);
-    } else if (buttonValue !== correctAnswer) {
-      wrongQuestion++;
+    } else {
       fourthQuestion();
-      console.log("Wrong:", wrongQuestion);
     }
   };
 
@@ -60,7 +57,6 @@ const thirdQuestion = function () {
 };
 
 const secondQuestion = function () {
-  let correctAnswer = "6";
   questionField.innerText = arrayOfQuestions[1];
   firstAns.innerText = "2";
   secondAns.innerText = "4";
@@ -68,16 +64,14 @@ const secondQuestion = function () {
   fourthAns.innerText = "6";
 
   const getValue = function (event) {
+    let correctAnswer = "6";
     const buttonValue = event.target.innerText;
     console.log(buttonValue);
     if (buttonValue === correctAnswer) {
       correctQuestion++;
       thirdQuestion();
-      console.log("Correct:", correctQuestion);
-    } else if (buttonValue !== correctAnswer) {
-      wrongQuestion++;
+    } else {
       thirdQuestion();
-      console.log("Wrong:", wrongQuestion);
     }
   };
 
@@ -87,7 +81,6 @@ const secondQuestion = function () {
 };
 
 const firstQuestion = function () {
-  let correctAnswer = "4";
   questionField.innerText = arrayOfQuestions[0];
   firstAns.innerText = "6";
   secondAns.innerText = "3";
@@ -95,15 +88,13 @@ const firstQuestion = function () {
   fourthAns.innerText = "0";
 
   const getValue = function (event) {
+    let correctAnswer = "4";
     const buttonValue = event.target.innerText;
     if (buttonValue === correctAnswer) {
       correctQuestion++;
       secondQuestion();
-      console.log("Correct:", correctQuestion);
-    } else if (buttonValue !== correctAnswer) {
-      wrongQuestion++;
+    } else {
       secondQuestion();
-      console.log("Wrong:", wrongQuestion);
     }
   };
 
