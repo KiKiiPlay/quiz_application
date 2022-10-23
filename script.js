@@ -10,6 +10,12 @@ const wrongResult = document.getElementById("wrongQuantity");
 
 const arrayOfQuestions = ["2 + 2", "3 + 3", "4 + 4", "5 + 5"];
 
+// const showResult = function () {
+//   const wrongQuestion = 4 - correctQuestion;
+//   correctResult.innerText = "Correct: " + correctQuestion;
+//   wrongResult.innerText = "Wrong: " + wrongQuestion;
+// };
+
 const fourthQuestion = function () {
   questionField.innerText = arrayOfQuestions[3];
   firstAns.innerText = "62";
@@ -23,8 +29,12 @@ const fourthQuestion = function () {
     if (buttonValue === correctAnswer) {
       correctQuestion++;
       window.location.href = "finish_page.html";
+      correctResult.innerText = "Correct: " + correctQuestion;
+      wrongResult.innerText = "Wrong: " + wrongQuestion;
     } else {
       window.location.href = "finish_page.html";
+      correctResult.innerText = "Correct: " + correctQuestion;
+      wrongResult.innerText = "Wrong: " + wrongQuestion;
     }
   };
 
